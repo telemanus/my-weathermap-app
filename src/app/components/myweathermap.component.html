@@ -1,0 +1,30 @@
+<mat-card colour="accent">
+<div fxLayout="row" class="container">
+<form [formGroup]="searchForm">
+  <div fxFlex=100% class="form-group">
+    <label for="cityname">City Name</label>
+    <input formControlName="cityname" id="cityname" type="text" class="form-control">
+  </div>
+<!--  <div class="item" fxFlex=100%><button type="submit">Search Now</button></div> -->
+</form>
+</div>
+</mat-card>
+<mat-card>
+  <div fxLayout="row" class="container">
+    <div fxFlex=100%>
+      {{cityname}}
+    </div>
+    <div fxFlex=100%>
+        Temperature {{result.temp}}K
+    </div>
+    <div fxFlex=100%>
+        Humidity {{result.humidity}}
+    </div>
+    <div fxFlex=100%>
+        Min Temp {{result.temp_min}}K
+    </div>
+    <div fxFlex=100%>
+        Max Temp {{result.temp_max}}K
+      </div>
+  </div>
+</mat-card>
